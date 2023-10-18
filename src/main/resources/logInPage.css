@@ -1,0 +1,18 @@
+.label-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0076A3;
+}
+
+.text-field {
+    -fx-prompt-text-fill: rgb(128, 128, 128);
+    -fx-background-color: #f4f4f4;
+    -fx-pref-width: 200px;
+}
+
+.button-primary {
+    -fx-background-color: #0076A3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-pref-width: 100px;
+}

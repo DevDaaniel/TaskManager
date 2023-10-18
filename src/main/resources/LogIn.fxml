@@ -3,13 +3,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.Main">
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.SignController">
     <center>
         <VBox alignment="CENTER" spacing="10">
-            <Label text="Log In" style="-fx-font-size: 24px;" />
-            <TextField fx:id="usernameField" promptText="Username" />
-            <PasswordField fx:id="passwordField" promptText="Password" />
-            <Button text="Log In" onAction="#logInAction" />
+            <Label styleClass="label-title" text="Log In" />
+            <TextField fx:id="usernameField" styleClass="text-field" promptText="Username" />
+            <PasswordField fx:id="passwordField" styleClass="text-field" promptText="Password" />
+            <Button text="Log In" onAction="#logInAction" styleClass="button-primary" />
         </VBox>
     </center>
+
+    <stylesheets>
+        <URL value="@logInPage.css" />
+    </stylesheets>
 </BorderPane>

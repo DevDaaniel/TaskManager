@@ -3,13 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.Main">
-    <center>
-        <VBox alignment="CENTER" spacing="10">
-            <Label text="Register" style="-fx-font-size: 24px;" />
-            <TextField fx:id="usernameField" promptText="Username" />
-            <PasswordField fx:id="passwordField" promptText="Password" />
-            <Button text="Register" onAction="#registerAction" />
-        </VBox>
-    </center>
-</BorderPane>
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.SignController">
+    <VBox alignment="CENTER" spacing="10">
+        <Label styleClass="label-title" text="Register" />
+        <TextField fx:id="usernameField" styleClass="text-field" promptText="Username" />
+        <PasswordField fx:id="passwordField" styleClass="text-field" promptText="Password" />
+        <Button onAction="#registerAction" styleClass="button-primary" text="Register" />
+    </VBox>
+
+    <stylesheets>
+        <URL value="@registerPage.css" />
+    </stylesheets>
+</AnchorPane>
