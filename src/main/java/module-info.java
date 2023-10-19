@@ -2,8 +2,6 @@ module com.srdaniel.taskmanager {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-    requires firebase.admin;
-    requires com.google.auth.oauth2;
 
 /*
     requires com.dlsc.formsfx;

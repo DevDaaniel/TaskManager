@@ -9,6 +9,7 @@
         <Label styleClass="label-title" text="Register" />
         <TextField fx:id="usernameField" styleClass="text-field" promptText="Username" />
         <PasswordField fx:id="passwordField" styleClass="text-field" promptText="Password" />
+        <PasswordField fx:id="confirmpasswordField" styleClass="text-field" promptText="Confirm Password" />
         <Button onAction="#registerAction" styleClass="button-primary" text="Register" />
     </VBox>
 

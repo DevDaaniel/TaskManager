@@ -2,10 +2,30 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.input.MouseEvent?>
+<?import javafx.scene.control.cell.TextFieldListCell?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.paint.Color?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.srdaniel.taskmanager.TasksController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<?import java.net.URL?>
+<?import com.srdaniel.taskmanager.TaskCellFactory?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.TasksController">
+    <center>
+        <ListView fx:id="taskListView" prefWidth="300.0" prefHeight="400.0" onMouseClicked="#handleTaskClicked">
+            <cellFactory>
+                <TaskCellFactory />
+            </cellFactory>
+        </ListView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10.0">
+            <TextField fx:id="taskInput" promptText="Add a new task" onAction="#addTask" />
+            <Button text="Mark as Completed" onAction="#markAsCompleted" />
+        </HBox>
+    </bottom>
+    <stylesheets>
+        <URL value="@listTask.css" />
+    </stylesheets>
+</BorderPane>

@@ -27,9 +27,6 @@ public class SignController {
     public void registerAction(ActionEvent event) {
         loadRegisterScene();
     }
-    public void logOutAction(ActionEvent event) {
-        loadSignButtonsScene();
-    }
     public void exitAction(ActionEvent event) {
         Stage stage = (Stage) logInButton.getScene().getWindow();
         stage.close();
