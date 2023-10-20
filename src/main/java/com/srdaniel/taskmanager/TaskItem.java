@@ -1,7 +1,7 @@
 package com.srdaniel.taskmanager;
 
 public class TaskItem {
-    private String title;
+    private final String title;
     private boolean completed;
 
     public TaskItem(String title) {

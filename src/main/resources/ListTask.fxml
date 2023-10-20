@@ -10,7 +10,6 @@
 <?import javafx.scene.paint.Color?>
 
 <?import java.net.URL?>
-<?import com.srdaniel.taskmanager.TaskCellFactory?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.TasksController">
     <center>
         <ListView fx:id="taskListView" prefWidth="300.0" prefHeight="400.0" onMouseClicked="#handleTaskClicked">

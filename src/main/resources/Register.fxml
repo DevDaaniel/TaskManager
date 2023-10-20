@@ -7,10 +7,10 @@
 <AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.SignController">
     <VBox alignment="CENTER" spacing="10">
         <Label styleClass="label-title" text="Register" />
-        <TextField fx:id="usernameField" styleClass="text-field" promptText="Username" />
-        <PasswordField fx:id="passwordField" styleClass="text-field" promptText="Password" />
-        <PasswordField fx:id="confirmpasswordField" styleClass="text-field" promptText="Confirm Password" />
-        <Button onAction="#registerAction" styleClass="button-primary" text="Register" />
+        <TextField fx:id="loginUsernameField" styleClass="text-field" promptText="Username" />
+        <PasswordField fx:id="loginPasswordField" styleClass="text-field" promptText="Password" />
+        <PasswordField fx:id="confirmPasswordField" styleClass="text-field" promptText="Confirm Password" />
+        <Button fx:id="registerButton" onAction="#registerAction" styleClass="button-primary" text="Register" />
     </VBox>
 
     <stylesheets>

@@ -2,6 +2,9 @@ module com.srdaniel.taskmanager {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires java.sql;
+    requires java.desktop;
+    requires org.xerial.sqlitejdbc;
 
 /*
     requires com.dlsc.formsfx;
