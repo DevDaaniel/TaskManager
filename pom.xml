@@ -106,7 +106,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.srdaniel.taskmanager/com.srdaniel.taskmanager.Main</mainClass>
+                            <mainClass>com.srdaniel.taskmanager/com.srdaniel.taskmanager.auth.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

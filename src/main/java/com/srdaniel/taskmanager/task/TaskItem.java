@@ -1,4 +1,4 @@
-package com.srdaniel.taskmanager;
+package com.srdaniel.taskmanager.task;
 
 public class TaskItem {
     private final String title;

@@ -1,5 +1,6 @@
-package com.srdaniel.taskmanager;
+package com.srdaniel.taskmanager.auth;
 
+import com.srdaniel.taskmanager.auth.SignController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

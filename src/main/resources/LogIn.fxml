@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import java.net.URL?>
-<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.SignController">
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srdaniel.taskmanager.auth.SignController">
     <center>
         <VBox alignment="CENTER" spacing="10">
             <Label styleClass="label-title" text="Log In" />

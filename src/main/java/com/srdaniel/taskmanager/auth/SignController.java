@@ -1,6 +1,5 @@
-package com.srdaniel.taskmanager;
+package com.srdaniel.taskmanager.auth;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,9 +15,13 @@ import java.util.Objects;
 
 public class SignController {
     @FXML
-    public TextField loginUsernameField;
+    public TextField usernameField;
+    @FXML
+    public PasswordField PasswordField;
     @FXML
     public PasswordField loginPasswordField;
+    @FXML
+    public TextField loginUsernameField;
     @FXML
     public PasswordField confirmPasswordField;
 
@@ -28,8 +31,8 @@ public class SignController {
     @FXML
     private Button registerButton;
 
-    public void logInAction() {
-        String loginPassword = loginPasswordField.getText();
+    public String logInAction() {
+        String loginPassword = PasswordField.getText();
         String confirmPassword = confirmPasswordField.getText();
 
         if (!loginPassword.equals(confirmPassword)) {
@@ -38,9 +41,10 @@ public class SignController {
             System.out.println("Passwords match.");
             loadLoginScene();
         }
+        return loginPassword;
     }
 
-    public void registerAction(ActionEvent event) {
+    public void registerAction() {
         loadRegisterScene();
     }
 
@@ -55,6 +59,14 @@ public class SignController {
             Stage stage = (Stage) logInButton.getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
+
+            UserAuthentication auth = new UserAuthentication();
+            boolean loginResult = auth.authenticateUser(loginUsernameField.getText(), loginPasswordField.getText());
+            if (loginResult) {
+                System.out.println("Successfully logged in!");
+            } else {
+                System.out.println("Login error.");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,7 +82,7 @@ public class SignController {
             stage.setScene(scene);
 
             UserAuthentication auth = new UserAuthentication();
-            boolean registrationResult = auth.registerUser(loginUsernameField.getText(), loginPasswordField.getText());
+            boolean registrationResult = auth.registerUser(usernameField.getText(), PasswordField.getText());
             if (registrationResult) {
                 System.out.println("Successfully registered!");
             } else {

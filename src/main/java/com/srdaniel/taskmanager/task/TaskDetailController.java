@@ -1,5 +1,6 @@
-package com.srdaniel.taskmanager;
+package com.srdaniel.taskmanager.task;
 
+import com.srdaniel.taskmanager.task.TaskItem;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 

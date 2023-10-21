@@ -14,4 +14,8 @@ module com.srdaniel.taskmanager {
 */
     opens com.srdaniel.taskmanager to javafx.fxml;
     exports com.srdaniel.taskmanager;
+    exports com.srdaniel.taskmanager.auth;
+    opens com.srdaniel.taskmanager.auth to javafx.fxml;
+    exports com.srdaniel.taskmanager.task;
+    opens com.srdaniel.taskmanager.task to javafx.fxml;
 }

@@ -1,4 +1,4 @@
-package com.srdaniel.taskmanager;
+package com.srdaniel.taskmanager.task;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class TasksController {
 
@@ -36,7 +37,7 @@ public class TasksController {
 
         taskListView.setCellFactory(new TaskCellFactory());
 
-        taskListView.getStylesheets().add(getClass().getResource("listTask.css").toExternalForm());
+        taskListView.getStylesheets().add(Objects.requireNonNull(getClass().getResource("listTask.css")).toExternalForm());
     }
 
     @FXML

@@ -1,4 +1,4 @@
-package com.srdaniel.taskmanager;
+package com.srdaniel.taskmanager.task;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
