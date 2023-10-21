@@ -15,9 +15,9 @@ import java.util.Objects;
 
 public class SignController {
     @FXML
-    public TextField usernameField;
+    public TextField registerUsernameField;
     @FXML
-    public PasswordField PasswordField;
+    public PasswordField registerPasswordField;
     @FXML
     public PasswordField loginPasswordField;
     @FXML
@@ -32,20 +32,15 @@ public class SignController {
     private Button registerButton;
 
     public String logInAction() {
-        String loginPassword = PasswordField.getText();
-        String confirmPassword = confirmPasswordField.getText();
-
-        if (!loginPassword.equals(confirmPassword)) {
-            System.out.println("Passwords do not match.");
-        } else {
-            System.out.println("Passwords match.");
+        {
             loadLoginScene();
         }
-        return loginPassword;
+        return null;
     }
-
     public void registerAction() {
-        loadRegisterScene();
+        {
+            loadRegisterScene();
+        }
     }
 
     public void exitAction() {
@@ -82,7 +77,7 @@ public class SignController {
             stage.setScene(scene);
 
             UserAuthentication auth = new UserAuthentication();
-            boolean registrationResult = auth.registerUser(usernameField.getText(), PasswordField.getText());
+            boolean registrationResult = auth.registerUser(registerUsernameField.getText(), registerPasswordField.getText());
             if (registrationResult) {
                 System.out.println("Successfully registered!");
             } else {
