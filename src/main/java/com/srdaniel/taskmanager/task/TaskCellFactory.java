@@ -1,6 +1,5 @@
 package com.srdaniel.taskmanager.task;
 
-import com.srdaniel.taskmanager.task.TaskItem;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.util.Callback;
