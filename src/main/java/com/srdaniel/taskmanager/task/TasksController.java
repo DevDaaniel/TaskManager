@@ -16,15 +16,15 @@ import java.util.Objects;
 public class TasksController {
 
     @FXML
-    private ListView<TaskItem> taskListView;
+    public ListView<TaskItem> taskListView;
 
     @FXML
-    private TextField taskInput;
+    public TextField taskInput;
 
     @FXML
-    private Button completeButton;
+    public Button completeButton;
 
-    private final ListTask listTask;
+    public final ListTask listTask;
 
     public TasksController(Button completeButton) {
         this.completeButton = completeButton;
@@ -32,7 +32,7 @@ public class TasksController {
     }
 
     @FXML
-    private void initialize() {
+    public void initialize() {
         taskListView.setItems(listTask.getTasks());
 
         taskListView.setCellFactory(new TaskCellFactory());
@@ -41,7 +41,7 @@ public class TasksController {
     }
 
     @FXML
-    private void addTask() {
+    public void addTask() {
         String taskTitle = taskInput.getText();
         if (!taskTitle.isEmpty()) {
             TaskItem newTask = new TaskItem(taskTitle);
@@ -51,7 +51,7 @@ public class TasksController {
     }
 
     @FXML
-    private void markAsCompleted() {
+    public void markAsCompleted() {
         TaskItem selectedTask = taskListView.getSelectionModel().getSelectedItem();
         if (selectedTask != null) {
             selectedTask.setCompleted(true);
@@ -59,14 +59,14 @@ public class TasksController {
     }
 
     @FXML
-    private void handleTaskClicked(MouseEvent event) {
+    public void handleTaskClicked(MouseEvent event) {
         TaskItem selectedTask = taskListView.getSelectionModel().getSelectedItem();
         if (selectedTask != null) {
             openTaskDetailWindow(selectedTask);
         }
     }
 
-    private void openTaskDetailWindow(TaskItem task) {
+    public void openTaskDetailWindow(TaskItem task) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("TaskDetailView.fxml"));
             Parent root = loader.load();
