@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class UserAuthentication {
 
-    private static final String DB_URL = "jdbc:sqlite:database.db";
+    private static final String DB_URL = "jdbc:sqlite:/home/daniel/IdeaProjects/TaskManager/src/main/java/com/srdaniel/taskmanager/database.db";
 
     public Connection connect() throws SQLException {
         return DriverManager.getConnection(DB_URL);

@@ -50,7 +50,9 @@ public class SignController {
 
     private void loadLoginScene() {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/LogIn.fxml")));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/LogIn.fxml"));
+            Parent root = loader.load();
+
             Stage stage = (Stage) logInButton.getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -80,6 +82,7 @@ public class SignController {
             boolean registrationResult = auth.registerUser(registerUsernameField.getText(), registerPasswordField.getText());
             if (registrationResult) {
                 System.out.println("Successfully registered!");
+                loadLoginScene();
             } else {
                 System.out.println("Registration error.");
             }

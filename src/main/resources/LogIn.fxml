@@ -10,7 +10,7 @@
             <Label styleClass="label-title" text="Log In" />
             <TextField fx:id="loginUsernameField" styleClass="text-field" promptText="Username" />
             <PasswordField fx:id="loginPasswordField" styleClass="text-field" promptText="Password" />
-            <Button text="Log In" onAction="#logInAction" styleClass="button-primary" />
+            <Button fx:id="logInButton" text="Log In" onAction="#logInAction" styleClass="button-primary" />
         </VBox>
     </center>
 
