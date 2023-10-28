@@ -26,18 +26,26 @@ public class TasksController {
 
     public final ListTask listTask;
 
-    public TasksController(Button completeButton) {
+    public TasksController() {
         this.completeButton = completeButton;
         listTask = new ListTask();
     }
 
     @FXML
-    public void initialize() {
+    public void initialize(){
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ListTask.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
         taskListView.setItems(listTask.getTasks());
 
         taskListView.setCellFactory(new TaskCellFactory());
 
+
         taskListView.getStylesheets().add(Objects.requireNonNull(getClass().getResource("listTask.css")).toExternalForm());
+    } catch(IOException e){
+        e.printStackTrace();
+    }
     }
 
     @FXML
