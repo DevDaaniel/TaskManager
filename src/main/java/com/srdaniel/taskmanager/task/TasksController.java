@@ -30,7 +30,9 @@ public class TasksController {
         this.completeButton = completeButton;
         listTask = new ListTask();
     }
-
+    public static void initializer(){
+        initializer();
+    }
     @FXML
     public void initialize(){
         try{
@@ -38,9 +40,6 @@ public class TasksController {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         taskListView.setItems(listTask.getTasks());
-
-        taskListView.setCellFactory(new TaskCellFactory());
-
 
         taskListView.getStylesheets().add(Objects.requireNonNull(getClass().getResource("listTask.css")).toExternalForm());
     } catch(IOException e){

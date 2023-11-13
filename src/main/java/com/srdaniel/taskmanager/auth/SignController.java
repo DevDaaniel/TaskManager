@@ -62,6 +62,7 @@ public class SignController {
             boolean loginResult = auth.authenticateUser(loginUsernameField.getText(), loginPasswordField.getText());
             if (loginResult) {
                 System.out.println("Successfully logged in!");
+                TasksController.initializer();
             } else {
                 System.out.println("Login error.");
             }
