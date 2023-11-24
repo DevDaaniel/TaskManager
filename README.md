@@ -1,4 +1,2 @@
 # TaskManager
 ## Architecture Overview:
-
-        . . .
